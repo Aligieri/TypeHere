@@ -4,11 +4,14 @@ struct ContentView: View {
     @State private var mouseLocation: CGPoint = .zero
     @State private var isListeningForClick: Bool = false
     @State private var inputData = ""
+    @State private var isSecure: Bool = true
+    //@State private var eyeButtonIcon = "eye.slash.circle"
+    @State private var eyeButtonIcon = "eye.circle"
     private let globalMouseListener = GlobalMouseListener()
     
     var body: some View {
         VStack{
-            Text("Target coordinates: \(Int(ceil(mouseLocation.x))), \(Int(ceil(mouseLocation.y)))")
+            Text(self.isListeningForClick ? "Click on target" : "Target coordinates: \(Int(ceil(mouseLocation.x))), \(Int(ceil(mouseLocation.y)))")
             HStack {
                 Button(action: {
                     if !self.isListeningForClick {
@@ -26,21 +29,32 @@ struct ContentView: View {
                         .foregroundColor(.black)
                         .padding(3)
                 }
-                .padding(20)
                 
-                TextField(text: $inputData){
-                    
+                if isSecure {
+                    SecureField("Enter Data", text: $inputData).frame(minWidth: 200)
+                } else {
+                    TextField("Enter Data", text: $inputData).frame(minWidth: 200)
                 }
-                .frame(minWidth: 200)
+                
+                Button(action: {
+                    isSecure.toggle()
+                }) {
+                    Image(systemName: isSecure ? "eye.circle" : "eye.slash.circle")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.black)
+                        .padding(3)
+                }
                 
                 Button(action:{
                     simulateMouseClick(at: mouseLocation)
                     simulateKeyPress(with: inputData)
                 }) {
                     Text("Send keys")
-                }.padding(20)
+                }
                 
             }
+            .padding(15)
             .background(Color.white)
         }
     }
