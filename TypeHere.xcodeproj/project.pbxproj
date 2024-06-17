@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C7A4FD52C208D4100294690 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7A4FD42C208D4100294690 /* AppDelegate.swift */; };
 		1CC4BD172C1327D400E1E842 /* TypeHereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC4BD162C1327D400E1E842 /* TypeHereApp.swift */; };
 		1CC4BD192C1327D400E1E842 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC4BD182C1327D400E1E842 /* ContentView.swift */; };
 		1CC4BD1B2C1327D700E1E842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CC4BD1A2C1327D700E1E842 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C7A4FD42C208D4100294690 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CC4BD132C1327D400E1E842 /* TypeHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypeHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC4BD162C1327D400E1E842 /* TypeHereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeHereApp.swift; sourceTree = "<group>"; };
 		1CC4BD182C1327D400E1E842 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		1CC4BD152C1327D400E1E842 /* TypeHere */ = {
 			isa = PBXGroup;
 			children = (
+				1C7A4FD42C208D4100294690 /* AppDelegate.swift */,
 				1CC4BD162C1327D400E1E842 /* TypeHereApp.swift */,
 				1CC4BD182C1327D400E1E842 /* ContentView.swift */,
 				1CC4BD252C13291A00E1E842 /* GlobalMouseListener.swift */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7A4FD52C208D4100294690 /* AppDelegate.swift in Sources */,
 				1CC4BD2A2C133B8100E1E842 /* KeyboardEventHandler.swift in Sources */,
 				1CC4BD192C1327D400E1E842 /* ContentView.swift in Sources */,
 				1CC4BD262C13291A00E1E842 /* GlobalMouseListener.swift in Sources */,
